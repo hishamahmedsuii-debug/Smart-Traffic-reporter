@@ -1,0 +1,32 @@
+[
+  {
+    "id": "STR-MSRGDTCH-C5VFD",
+    "name": "rahul",
+    "email": "",
+    "title": "a large pothole near mg road",
+    "category": "Pothole",
+    "description": "it is effecting the public ",
+    "location": "mg road,malakpet,hyderabad,telangana",
+    "latitude": "17.383067847894566",
+    "longitude": "78.50209115548036",
+    "photo": "/uploads/1786621620665-4oxb0dujr5p.jpeg",
+    "status": "Pending",
+    "createdAt": "2026-08-13T11:47:00.689Z",
+    "updatedAt": "2026-08-13T11:47:00.689Z"
+  },
+  {
+    "id": "STR-MSRGJG23-DOZAW",
+    "name": "Rider Legend",
+    "email": "riderlegend423@gmail.com",
+    "title": "large pothole near bus stop",
+    "category": "Pothole",
+    "description": "it is effecting the people whenever the cross through it.",
+    "location": "mg road,malakpet,hyderabad,telangana",
+    "latitude": "17.383067847894566",
+    "longitude": "78.50209115548036",
+    "photo": "/uploads/1786621883387-be9nq8wklcc.jpeg",
+    "status": "Verified",
+    "createdAt": "2026-08-13T11:51:23.403Z",
+    "updatedAt": "2026-08-13T11:54:45.023Z"
+  }
+]

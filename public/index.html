@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartRoad — Traffic Problem Reporter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="/">🚦 SmartRoad</a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#report">Report</a>
+    <a href="#reports">Reports</a>
+    <a href="#how-it-works">How It Works</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div>
+    <p class="eyebrow">SMART CITY • COMMUNITY REPORTING</p>
+    <h1>Report road problems.<br><span>Make roads safer.</span></h1>
+    <p class="lead">Report potholes, broken signals, damaged signs, flooding and other traffic problems. Your report gets a tracking ID and can be managed from an admin dashboard.</p>
+    <div class="actions"><a class="btn primary" href="#report">Report a problem</a><a class="btn ghost" href="#track">Track a report</a></div>
+  </div>
+  <div class="hero-card">
+    <div class="traffic-light"><i></i><i></i><i></i></div>
+    <h3>From report to resolution</h3>
+    <p>Report → Verify → Fix → Resolve</p>
+  </div>
+</section>
+
+<section class="stats">
+  <div><strong id="totalReports">0</strong><span>Total reports</span></div>
+  <div><strong id="pendingReports">0</strong><span>Pending</span></div>
+  <div><strong id="resolvedReports">0</strong><span>Resolved</span></div>
+</section>
+
+<section id="report" class="section">
+  <div class="section-title"><p class="eyebrow">01 • SUBMIT</p><h2>Report a road problem</h2><p>Give enough information for the issue to be verified and located.</p></div>
+  <form id="reportForm" class="card form-grid" enctype="multipart/form-data">
+    <label>Your name<input name="name" placeholder="Optional"></label>
+    <label>Email<input type="email" name="email" placeholder="Optional"></label>
+    <label>Problem title *<input name="title" required placeholder="e.g. Large pothole near bus stop"></label>
+    <label>Category *
+      <select name="category" required>
+        <option value="">Choose one</option><option>Pothole</option><option>Broken traffic signal</option><option>Street light</option><option>Road flooding</option><option>Damaged sign</option><option>Other</option>
+      </select>
+    </label>
+    <label class="full">Location *<input id="location" name="location" required placeholder="Road / area / landmark"></label>
+    <div class="full location-row"><button type="button" class="btn ghost" id="useLocation">📍 Use my location</button><span id="coords">Location not detected</span></div>
+    <input type="hidden" name="latitude" id="latitude"><input type="hidden" name="longitude" id="longitude">
+    <label class="full">Description *<textarea name="description" required rows="5" placeholder="Explain what is wrong and how it affects traffic..."></textarea></label>
+    <label class="full">
+  Take or upload a photo
+
+  <input
+    type="file"
+    name="photo"
+    accept="image/*"
+    capture="environment"
+  >
+</label>
+    <button class="btn primary full" type="submit">Submit report</button>
+    <p id="formMessage" class="full message"></p>
+  </form>
+</section>
+
+<section id="track" class="section alt">
+  <div class="section-title"><p class="eyebrow">02 • TRACK</p><h2>Track your report</h2><p>Enter the tracking ID you received after submitting a report.</p></div>
+  <div class="card track-box"><div class="track-input"><input id="trackId" placeholder="Example: STR-ABC123-XYZ12"><button class="btn primary" id="trackBtn">Track</button></div><div id="trackResult"></div></div>
+</section>
+
+<section class="section">
+  <div class="section-title"><p class="eyebrow">03 • PROCESS</p><h2>How it works</h2></div>
+  <div class="steps"><div><b>01</b><h3>Report</h3><p>Citizen submits the issue with location and optional photo.</p></div><div><b>02</b><h3>Verify</h3><p>An administrator reviews the report.</p></div><div><b>03</b><h3>Fix</h3><p>The issue can be assigned for action.</p></div><div><b>04</b><h3>Resolve</h3><p>Status is updated after the problem is fixed.</p></div></div>
+</section>
+</main>
+
+<footer>SmartRoad • Portfolio / prototype project</footer>
+<script src="script.js"></script>
+</body>
+</html>
